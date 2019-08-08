@@ -22,6 +22,7 @@
 		4B7EAC7622FC810C001F321D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B7EAC7922FC810C001F321D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B7EAC7B22FC810C001F321D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B7EAC8122FC817C001F321D /* DeepLinkCheburek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeepLinkCheburek.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		4B7EAC6E22FC810A001F321D /* DeepLinkCheburek */ = {
 			isa = PBXGroup;
 			children = (
+				4B7EAC8122FC817C001F321D /* DeepLinkCheburek.entitlements */,
 				4B7EAC6F22FC810A001F321D /* AppDelegate.swift */,
 				4B7EAC7122FC810A001F321D /* ViewController.swift */,
 				4B7EAC7322FC810A001F321D /* Main.storyboard */,
@@ -96,6 +98,11 @@
 				TargetAttributes = {
 					4B7EAC6B22FC810A001F321D = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -283,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQ7UXJJ9YY;
 				INFOPLIST_FILE = DeepLinkCheburek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQ7UXJJ9YY;
 				INFOPLIST_FILE = DeepLinkCheburek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

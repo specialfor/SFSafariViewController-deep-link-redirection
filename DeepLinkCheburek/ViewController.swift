@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(forName: .didReceiveDeepLink, object: nil, queue: .main) { notification in
+            self.dismiss(animated: true, completion: {
+                self.performSegue(withIdentifier: "RedirectedScreen", sender: nil)
+            })
+        }
     }
 
+    @IBAction private func openWebPage(_ sender: Any) {
+        let url = URL(string: "http://localhost:8000/index.html")!
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion:  nil)
+    }
+}
 
+extension Notification.Name {
+    static let didReceiveDeepLink = Notification.Name("didReceiveDeepLink")
 }
 
